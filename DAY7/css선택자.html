@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css선택자</title>
+    <style>
+        /*
+            color: aquamarine;
+        } */
+         h1 {
+            color: black;
+         }
+         #id_section {
+            background-color: blueviolet;
+         }
+         .class_section {
+            background-color: crimson;
+         }
+         .web_level > li {
+            color: darkmagenta;
+         }
+         .web_level > li > a {
+            text-decoration: none;
+            color: black;
+         }
+         .web_class_name a {
+            text-decoration: none;
+            background-color: blueviolet;
+            color: black;
+         }
+         .front_end_lag ~ li {
+            background-color: yellow;
+         }
+         .china_food + li {
+            background-color: red;
+         }
+         .p_teg, h3, #span_id {
+            background-color: pink;
+         }
+    </style>
+</head>
+<body>
+    <h1>css선택자</h1>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Et, aliquam mollitia. Quo quisquam dolorum explicabo a odit 
+        reprehenderit repellat expedita, esse error officiis nisi possimus ea 
+        iste deserunt ipsum? Debitis.
+    </p>
+    <section id="id_section">
+        <h2>아이디선택자</h2>
+    </section>
+    <section class="class_section">
+        <h2>클래스 선택자</h2>
+    </section>
+
+    <ul class="web_level"> 
+        <li>
+            <a href="#">
+                웹1
+            </a>
+        </li>
+        <li>웹2</li>
+        <li>웹3</li>
+        
+    </ul>
+
+    <ul class="web_class_name"> 
+        <li>
+            <a href="#">웹1</a>
+        </li>
+        <li>
+            <a href="#">웹2</a>
+        </li>
+        <li>
+            <a href="#">웹3</a>
+        </li>
+        
+    </ul>
+
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li class="front_end_lag">JAVASCRIPT</li>
+        <li>REACT</li>
+        <li>VUE</li>
+    </ul>
+
+ <!--  ul>li*5 자식요소 만드는법  -->
+    <ul>
+        <li class="china_food">짜장면</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li>군만두</li>
+        <li>유산슬</li>
+    </ul>
+
+    <div>
+        <p class="p_teg">p태그입니다.</p>
+        <h3>h3태그입니다.</h3>
+        <span id="span_id">span태그입니다.</span>
+    </div>
+</body>
+</html>
