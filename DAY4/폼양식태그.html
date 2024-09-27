@@ -6,6 +6,101 @@
     <title>폼양식태그</title>
 </head>
 <body>
-    <form action=""></form>    
+    <form action="" method="post" autocomplete="on" name="user"></form>    
+    <!--지금까지 우리는 텍스트나 링크,멀티미디어 등을 웹브라우저에 띄우는 방법을 실습했는데
+    이것들을 일방적으로 정보를 보는 사람에게 제공하는 기능만을 수행하는 것이었음.
+    그러나 웹사이트는 일방적으로 정보를 제공만 하지 않음!
+    사용자에게 정보를 입력받아서 서버로 해당 정보를 전송하고 상호작용이 가능한 인터페이스를 제작해야함.
+    이럴때 사용하는 것이 폼태그입니다.
+    이 폼태그라는 것을 이용해서 우리는 텍스트나 숫자,비밀번호,체크박스,라디오버튼 등을 사용하여
+    다양한 형태의 정보를 입력받아보는 실습을 하는것  -->
+
+    <!-- 폼태그의 action속성
+     -폼태그를 작성하면 자동으로 action이라는 속성을 넣는 공간이 생김.
+     이 action이라는 속성은 폼 데이터를 전송할 서버의 주소를 지정 할 수 있음.
+     실제로 데이터를 처리할 url을 선언하고, 절대경로와 상대경로로 지정할 수 있음.
+     우리는 지금 사용하는 서버가 없기때문에 이 속성은 사용하지않고 넘어감 -->
+
+     <!-- 폼태그의 method속성
+      -폼태그에는 메소드 속성이라는 것이 있는데 post와 get으로 서버와 데이터를 주고받을
+      방식을 지정하는것인데 딥하게 메소드나 액션 속성을 알면 굉장히 어렵고 프론트앤드 개발의 
+      영역이기때문에 서버와 데이터를 주고받는 방식이라고 이론적으로만 설명하고 넘어감. -->
+
+      <!-- 폼태그의 auyocomplete 속성
+       - auyocomplete 속성 자동완성기능을 설정하거나 해제하는 속성
+       사용자가 어떤 것을 입력했을때 이전에 제공받은 값을 기반으로 추천단어 자동완성을 보여주는 기능.
+       on값을 넣거나 아무것도 입력하지 않으면 자동완성 기능이 켜지고,
+       반대로 off값을 넣으면 자동완성이 꺼짐-->
+
+       <!-- 폼태그의 name속성
+        -폼 요소를 다른 요소와 식별하는데 사용하는 속성 name값을 선언하면 서버로 데이터를 제출 할때
+        어떤 이름을 가진 폼에서 전송된 데이터라는것을 정확하게 표시할 수 있음.
+        user라는 이름을 지어줬음 -->
+
+<form autocomplete="on" name="user">
+    <input type="text">
+    <!-- 텍스트를 입력받는 타입인 텍스트 -->
+    <input type="checkbox">
+    <!-- 사용자가 직접 체크를 할 수 있는 체크받스 -->
+    <input type="password">
+    <!-- 비밀번호를 입력하는 패스워드 -->
+    <input type="number">
+    <!-- 숫자만 입력받을 수있는 넘버라는 타입 -->
+    <input type="email">
+    <!-- 이메일을 입력받는 이메일 타입 -->
+    <input type="submit">
+    <!-- 제출 할 수 있는 버튼 submit버튼 -->
+    <input type="tel">
+    <!-- 전화번호를 입력하는 텔 타입 -->
+    <input type="radio">
+    <!-- 여러개중에 하나를 선택하는 라디오버튼 -->
+    <input type="date">
+    <!-- 날짜를 지정하는 데이트타입 -->
+    <input type="button">
+    <!-- 버튼을 생성하는 버튼타입 -->
+
+<!-- input태그 : 폼태그의 자식요소로 들어가 있어야한다. 
+ 인풋은 가장 대표적인 입력요소로 텍스트,비밀번호 , 숫자,이메일 등을 다양한 종류의 형태로
+ 입력 받을 수 있는 태그 -->
+
+ <div>
+    <input type="text" name="username" >
+ </div>
+
+ <div>
+    <input type="checkbox" value="고양이">
+    <input type="checkbox" value="강아지">
+    <input type="checkbox" value="송아지">
+ </div>
+
+ <div>
+    <input type="password" name="userpassword">
+ </div>
+ <div>
+    <input type="number" name="userage" max="100" min="1">
+ </div>
+ <div>
+    <input type="email" name="useremail">
+ </div>
+ <div>
+    <input type="submit">
+ </div>
+<div>
+    <input type="tel">
+</div>
+<div>
+    <input type="radio" value="여성" name="성별">
+    <input type="radio" value="남성" name="성별">
+</div>
+<div>
+<input type="date" min="2024-09-05">
+</div>
+<div>
+    <input type="button" value="클릭">
+</div>
+
+
+</form>
+
 </body>
 </html>
