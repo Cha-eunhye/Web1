@@ -99,8 +99,102 @@
     <input type="button" value="클릭">
 </div>
 
+   <!-- 인풋들에 벨류와 네임을 지정 할 수가있음.
+  체크박스와 라디오타입에 부여하는 실습
+  먼저 보기 쉽게 모든 인풋들을 div로 감싸주기
+  div는 블록태그이니까 인라인태그인 input태그를 감쌀 수 있음. -->
+
+  <!-- value
+  체크박스에는 value값을 넣어줌 
+  이 value값은 우리가 클릭한 값이 서버로 넘어갈때 체크박스의 고양이를 체크하면
+  서버에 고양이를 체크했다고 인식되는것 -->
+  
+   <!-- min max
+   그리고 인풋에는 민과 멕스라는 속성이 있는데,
+   일반 텍스트 필드에는 적용되지 않지만, 숫자나 날짜, 시간등 
+   특정 타입의 입력요소에 사용되는 것들이 있습니다! -->
+
+    <input type="password" name="userpassword" minlength="8">
+   <!-- name
+    라이도 버튼을 예를들어 설명하자면,
+    이건 바로 같은 네임을 가진 라디오 타입의 인풋들을 하나의 그룹으로 묶어서 
+    같은 이름을 가진 그룹내에서는 하나만 선택 할 수 있도록 지정해 놓는것.
+    성별이나 혈액형 등 하나만 고를 때 사용하기 좋음.
+    name속성은 모든 타입에 사용 할 수 있음. -->
+    
+   <!-- maxlength / minlength 속성
+    텍스트나 패스워드 이메일등 문자열 형식으로 사용자가 입력하는 대로
+    데이터를 받는 타입이 있습니다.
+    maxlength / minlength를 이용하여 입력되는 문자열의 길이를 제한 할 수있습니다.-->
+
+    <input type="email" name="useremail" minlength="10" autofocus>
+    <!-- autofocus 속성
+     인풋 요소에 autofocus속성을 설정하면 웹페이지가 로드되거나 특정 조전을 만족했을때
+     해당 입력 요소에 자동으로 포커스가 지정되도록 설정할 수 있습니다.
+     
+     예를들어, 로그인 페이지에서 사용자 이름 입력 필드에 자동으로 커서를 깜박이게 포커스를 
+     설정하고 싶다면 사용자 이름 필드에 autofocus를 지정하면 알아서 페이지가 열렸을때 
+     이름 필드에 포커스가 되어있는것
+     이 속성은 true 나 false 값만 갖기 때문에 속성 값 입력없이 속성 명만 입력해도 
+     트루로 적용되어 autofocus가 켜짐-->
 
 </form>
+
+<div>
+   <input type="checkbox" value="고양이" checked> 고양이
+   <input type="checkbox" value="강아지"> 강아지
+   <input type="checkbox" value="송아지"> 송아지
+</div>
+<!-- checked 속성
+ 이속성을 사용하면 처음 웹 사이트를 로드 할 때부터 요소가 체크된 상태로 표시됩니다.
+ 주로 사용하는 인풋요소는 타입이 checked이거나 radio인 요소 입니다 -->
+
+ <div>
+   제출:
+   <input type="submit" disabled>
+ </div>
+ <!-- disabled 속성
+  disabled 속성을 사용하면 해당 요소를 사용할 수 없도록 세팅이됩니다.
+  disabled 속성은 따로 설정값이 없이 선언하며 사용자는 비활성화 된 즉 disabled된 요소를
+  클릭하거나 수정할 수없음!
+  이 기능을 통해 웹 페이지에 특정 요소를 일시적으로 사용할 수 없는 상태로 만들고 조건에 따라
+  사용가능 여부를 제어하는데 활용합니다 -->
+
+<div>
+   텍스트:
+   <input type="text" name="username">
+   <input type="text" name="username" readonly>
+   <!-- readonly 속성
+    readonly 속성은 읽기 전용입니다.
+    사용자는 해당요소가 가진 값을 읽은 수는 있지만 클릭하여 수정할 수 없습니다. -->
+</div>
+<div>
+   <input type="number" name="username" max="100" min="1" required>
+   <!-- required 속성
+    required는 필수라는 뜻을 가진 단어이다. required의 속성값은 인풋 태그에서 
+    반드시 필수로 입력해야하는 것을 설정하는 것을 의미합니다.
+    사용자가 해당 필드의 값을 입력하지 않고 form을 제출하려고 하면 
+    브라우저는 사용자의 제출을 받고 required의 속성이 들어간 인풋이 비어있다면 입력하라는 메세지를 
+    표출합니다. 즉! 필수 입력필드입니다. -->
+</div>
+
+<div>
+   <input type="email" name="useremail" minlength="10" autofocus>
+</div>
+<div>
+   <input type="submit">
+</div>
+
+<div>
+   <input type="text" name="username" placeholder="모땡땡">
+   <input type="text" name="username" readonly>
+   <!-- placeholder 속성
+    어떻게 입력하는지 힌트나 예시 텍스트를 제공하는 속성입니다.
+    이 placeholder로 설정한 텍스트는 입력 필드가 비어 있을 때만 보임.
+    사용자가 입력을 시작하면 자동으로 사라집니다. 
+    따라서 어떤 정보를 입력해야 하는지 또 어떤 형태로 입력해야하는지를 보여주는데에 사용됩니다. -->
+</div>
+
 
 </body>
 </html>
