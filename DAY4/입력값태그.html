@@ -6,6 +6,29 @@
     <title>입력값태그</title>
 </head>
 <body>
-    
+    <textarea name="개선의견" cols="50" rows="5"  placeholder="여러분들의 소중한 의견을
+    전해주세요.">사용자가 삭제할 수 있는 텍스트</textarea>
+    <!-- textarea 사용법
+     폼 태그에서 여러 줄에 텍스트를 입력 해야하는 경우가 있음.
+     예를들어 의견을 적어서 보내거나, 구체적인 요청사항등을 기재 해야 할 때 사용하는 방법.
+     input type text는 간단하게 한줄의 데이터를 서버로 전송할때 사용하고 
+     textarea 태그는 길게 입력해야하는 경우에 textarea라는 영역 태그를 사용해야함.
+      -->
+
+      <select name="lang" id="lang" size="2" multiple>
+           <option value="html">HTML</option> 
+           <option value="css">CSS</option> 
+           <option value="javascript">JAVASCRIPT</option> 
+           <option value="react">REACT</option> 
+           <option value="vue">VUE</option> 
+      </select>
+      <!-- 사용자가 여러개의 옵션 중에서 원하는것을 선택할 수 있도록 드롭다운 메뉴를 만드는 셀렉트 태그
+       셀렉트 태그는 옵션과 함께 사용!
+       네임과 아이디를 부여 할수 있음. 여러가지 옵션중에 하나를 선택 할 수 있으며,
+       선택한 값의 밸류값이 서버로 전송되는 구조.-->
+
+       <!-- 이렇게 사이즈를 이용해서 처음에 페이지가 로드되었을때 몇개 옵션을 보여 줄건지 정할 수 있고 
+        멀티풀 이라는 속성을 사용해서 여러가지 옵션을 선택하게 만들수도있음.
+        여러가지를 선택할 땐 컨트롤 하고 선택하면 됩니다.-->
 </body>
 </html>
