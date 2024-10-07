@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <!-- 포지션 속성
+     웹 페이지 내에서 요소의 위치를 조절
+      내가 원하는 기준을 잡아서 원하는 레이아웃을 원하는 기준 부분부터 시작하게 할 수 있는 속성.-->
+
+      <style>
+        .container {
+            position: relative;
+            /* 포지션의 기본속성은 static이라는 속성이다
+            position을 아무것도 선언하지 않으면 HTML요소는 자동으로 static속성이 지정.
+            스테틱은 기본이기 때문에 요소를 움직일 수 없음
+            즉, top값이나 left값을 줘도 원하는 기준점이 적용되지 않고 HTML문서가 기준이된다. */
+            width: 1000px;
+            border: 1px solid red;
+            margin-top: 50px;
+            height: 500px;
+        }
+        
+        .box {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .b1 {
+            background: seagreen;
+        }
+
+        .b2 {
+            background-color: chartreuse;
+            top: 50%;
+            left: 50%;
+            /*  transform: translateX (-50%); */
+            /*  transform: translateY (-50%); */
+            transform: translate(-50%, -50%);
+        }
+
+        .b3 {
+            background-color: aqua;
+            bottom: 0;
+            right: 0;
+            
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Magnam est repudiandae consectetur nihil aperiam neque, c
+            upiditate odio? Provident id est doloremque labore suscipit natus vero, explicabo, 
+            maiores facilis quis necessitatibus.</p>
+        <div class="box b1">왼쪽 위</div>
+        <div class="box b2">중간</div>
+        <div class="box b3">오른쪽 아래</div>
+    </div>
+    <!--absolute 앱솔루트의 특징
+    다른요소에 자신이 가진 크기의 영향을 미치지않고 자신의 크기로 인해 다른요소가 하단으로 밀리는 형상이 없고
+    스티커처럼 다른 요소위에 떠올라 있는 특징. -->
+
+    <div></div>
+</body>
+</html>

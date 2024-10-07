@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더구조실습</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(39, 5, 70);
+            color: #fff;
+            padding: 0 16px;
+            /* 첫번째는 탑,바텀/ 두번째는 왼쪽,오른쪽거리값 */
+            height: 100px;
+        }
+
+        .LOGO {
+            font-size: 24px;
+            font-weight: 900px;
+            margin-left: 16px;
+        }
+        
+        .header_menu {
+            display: flex;
+        }
+
+        .header_menu > li {
+            list-style: none;
+            margin: 0 16px;
+        }
+
+        .header_menu > li >a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .sign_zone {
+            display: flex;
+        }
+
+        .sign_zone > div >button {
+            padding: 16px;
+            background-color: rgb(64, 18, 107);
+            border: none;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .sign_zone > div >button >a {
+            text-decoration: none;
+            color: #767070;
+            padding: 16px;
+            /* 커서를 올리면 클릭이 전체모양에 다 되도록 만들어줌 */
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .sign_zone > div >button:hover {
+            background-color: rgb(172, 113, 228);
+            transition: 0.3s;
+        }
+
+        .sign_zone > div > button > a:hover {
+            color: #fff;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            LOGO
+        </div>
+        <!-- ul>li>a*4 -->
+        <ul class="header_menu">
+            <li>
+                <a href="#">ABOUT</a>
+            </li>
+            <li>
+                <a href="#">MENU</a>
+            </li>
+            <li>
+                <a href="#">PORTFOLIO</a>
+            </li>
+            <li>
+                <a href="#">CONTACT</a>
+            </li>
+        </ul>
+        <div class="sign_zone">
+            <div>
+                <button>
+                    <a href="#">로그인
+
+                    </a>
+                </button>
+            </div>
+            
+            <div>
+                <button>
+                    <a href="#">회원가입
+
+                    </a>
+                </button>
+            </div>
+        </div>
+
+    </header>
+</body>
+</html>
