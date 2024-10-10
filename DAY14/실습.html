@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습</title>
+    <style>
+        section {
+            width: 100%;
+            display: flex;
+        }
+
+        .box {
+            position: relative;
+            width: 40%;
+            height: 500px;
+            color: #fff;
+            margin: 10px;
+            padding: 16px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .box:nth-child(1) {
+            background: url(./이미지.jpg);
+        }
+
+        .box:nth-child(2) {
+            background: url(./두번째\ 이미지.jpg);
+        }
+
+        .box:nth-child(3) {
+            background: url(./3번째이미지.jpg);
+        }
+
+        .box:hover {
+            background-size: cover;
+            flex-shrink: 0;
+            transition: 0.3s;
+        }
+
+        .black {
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 532px;
+            border-radius: 25px;
+            opacity: 0.3;
+        }
+
+        .box:hover .black {
+            opacity: 0;
+
+        }
+
+        .text_area {
+            z-index: 1;
+
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 56px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <div class="text_area">
+            <p>enviromental</p>
+            <h2>환경</h2>
+        </div>
+
+        <div class="black"></div>
+        </div>
+     <div class="box">
+         <div class="text_area">
+            <p>social</p>
+            <h2>사회</h2>
+        </div>
+
+        <div class="black"></div>
+        </div>
+
+        <div class="box">
+        <div class="text_area">
+            <p>governance</p>
+            <h2>지배구조</h2>
+        </div>
+        <div class="black"></div>
+        </div>
+
+    </section>
+</body>
+</html>
