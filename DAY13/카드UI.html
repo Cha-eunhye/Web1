@@ -4,32 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카드ui</title>
-<style>
-    figure {
-        width: 400px;
-        height: 500px;
-        border-radius: 25px;
-        margin: 0;
-        background-size: 70% 60%;
-    }
+    <style>
+         section {
+            width: 100%;
+            display: flex;
+        }
 
-    a {
-        
-    }
+        .box {
+            position: relative;
+            width: 40%;
+            height: 500px;
+            color: #fff;
+            margin: 10px;
+            padding: 16px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .box:nth-child(1) {
+            background: url(./오사카.jpeg);
+        }
 
-</style>
+        .black {
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 532px;
+            border-radius: 25px;
+            opacity: 0.3;
+        }
+
+        .box:hover {
+            background-size: cover;
+            flex-shrink: 0;
+            transition: 0.3s;
+        }
+
+        .box:hover .black {
+            opacity: 0;
+
+        }
+
+        p {
+            font-size: 30px;
+        }
+        .text_area {
+            z-index: 1;
+
+        }
+
+    </style>
 </head>
 <body>
-    <article>
-        <figure>
-            <img class="card_img" src="./오사카.jpeg" alt="오사카사진">
-        </figure>
-        <div >
-            <h2>오사카</h2>
-            <div>
-                    <a href="#">둘러보기</a>
+    <section>
+        <div class="box">
+            <div class="text_area">
+                <p>오사카</p>
             </div>
         </div>
-    </article>
+
+        <div class="black"></div>
+    </section>
 </body>
 </html>
